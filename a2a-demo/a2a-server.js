@@ -1,1 +1,119 @@
-import express from "express";\nimport { readFileSync } from "fs";\nimport { fileURLToPath } from "url";\nimport { dirname, join } from "path";\n\nconst __dirname = dirname(fileURLToPath(import.meta.url));\nconst app = express();\napp.use(express.json());\n\nconst dataPath = join(__dirname, "..", "data", "contoso.json");\nconst db = JSON.parse(readFileSync(dataPath, "utf8"));\n\napp.get("/.well-known/agent.json", (req, res) => {\n  const card = JSON.parse(readFileSync(join(__dirname, "agent-card.json"), "utf8"));\n  res.json(card);\n});\n\napp.post("/tasks/send", (req, res) => {\n  const { id, message } = req.body;\n  const userText = message?.parts?.[0]?.text || "";\n  const lower = userText.toLowerCase();\n  let responseText = "";\n\n  if (lower.includes("brief") || lower.includes("account")) {\n    const account = db.accounts.find(a => lower.includes(a.name.toLowerCase().split(" ")[0]));\n    if (account) {\n      responseText = account.name + " (" + account.region + " - " + account.industry + ")\n" +\n        "Health: " + account.health_score + "/100 | Tier: " + account.tier + " | Value: $" + account.annual_value.toLocaleString() + "\n" +\n        "Owner: " + account.owner + " | Sponsor: " + account.executive_sponsor + "\n" +\n        "Products: " + account.products.join(", ") + "\n" +\n        "Risks: " + account.risks.map(r => r.description).join("; ");\n    } else {\n      responseText = "Account not found. Available: " + db.accounts.map(a => a.name).join(", ");\n    }\n  } else if (lower.includes("pipeline") || lower.includes("opportunit")) {\n    const opps = db.accounts.flatMap(a => (a.opportunities || []).filter(o => o.stage !== "Closed Won" && o.stage !== "Closed Lost"));\n    responseText = opps.map(o => o.name + ": " + o.stage + " - $" + o.amount.toLocaleString() + " (close: " + o.close_date + ")").join("\n");\n  } else if (lower.includes("compare")) {\n    const found = db.accounts.filter(a => lower.includes(a.name.toLowerCase().split(" ")[0]));\n    if (found.length >= 2) {\n      responseText = found.slice(0, 2).map(a => a.name + ": Health " + a.health_score + " | $" + a.annual_value.toLocaleString() + " | " + a.tier).join("\nvs\n");\n    } else {\n      responseText = "Name two accounts to compare. Available: " + db.accounts.map(a => a.name).join(", ");\n    }\n  } else if (lower.includes("meeting") || lower.includes("prep")) {\n    const account = db.accounts.find(a => lower.includes(a.name.toLowerCase().split(" ")[0]));\n    if (account) {\n      const risks = account.risks.map(r => r.description).join("; ");\n      const opps = (account.opportunities || []).map(o => o.name + ": " + o.stage + " - $" + o.amount.toLocaleString()).join("\n");\n      responseText = "Meeting Brief: " + account.name + "\n" +\n        "Owner: " + account.owner + " | Health: " + account.health_score + "/100\n" +\n        "Pipeline:\n" + (opps || "No open opportunities") + "\n" +\n        "Risks: " + (risks || "None") + "\n" +\n        "Talking Points:\n1. Review account health\n2. Discuss " + account.products[0] + " adoption\n3. Address risks\n4. Plan next engagement";\n    } else {\n      responseText = "Specify an account. Available: " + db.accounts.map(a => a.name).join(", ");\n    }\n  } else {\n    responseText = "I can help with: account briefings, pipeline reviews, meeting prep, and comparisons.";\n  }\n\n  res.json({\n    id,\n    status: { state: "completed" },\n    artifacts: [{ parts: [{ type: "text", text: responseText }] }]\n  });\n});\n\nconst PORT = 3001;\napp.listen(PORT, () => {\n  console.log("A2A Contoso Agent running on http://localhost:" + PORT);\n  console.log("Agent Card: http://localhost:" + PORT + "/.well-known/agent.json");\n});
+import express from "express";
+import { readFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const app = express();
+app.use(express.json());
+
+const dataPath = join(__dirname, "..", "data", "contoso.json");
+const db = JSON.parse(readFileSync(dataPath, "utf8"));
+
+const money = (value) =>
+  typeof value === "number" ? `$${value.toLocaleString()}` : "N/A";
+
+app.get("/.well-known/agent.json", (req, res, next) => {
+  try {
+    const card = JSON.parse(readFileSync(join(__dirname, "agent-card.json"), "utf8"));
+    res.json(card);
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.post("/tasks/send", (req, res, next) => {
+  try {
+    const { id, message } = req.body || {};
+    const userText = message?.parts?.[0]?.text || "";
+    const lower = userText.toLowerCase();
+    let responseText = "";
+
+    if (lower.includes("brief") || lower.includes("account")) {
+      const account = db.accounts.find(a =>
+        lower.includes(a.name.toLowerCase().split(" ")[0])
+      );
+
+      if (account) {
+        responseText =
+          `${account.name} (${account.region || "N/A"} - ${account.industry || "N/A"})\n` +
+          `Health: ${account.health ?? "N/A"}/100 | Tier: ${account.tier || "N/A"} | Value: ${money(account.annualValue)}\n` +
+          `Owner: ${account.owner || "N/A"} | Sponsor: ${account.executiveSponsor || "N/A"}\n` +
+          `Products: ${(account.microsoftProducts || []).join(", ") || "None"}\n` +
+          `Risks: ${(account.risks || []).map(r => r).join("; ") || "None"}`;
+      } else {
+        responseText = `Account not found. Available: ${db.accounts.map(a => a.name).join(", ")}`;
+      }
+    } else if (lower.includes("pipeline") || lower.includes("opportunit")) {
+      const opps = db.accounts.flatMap(a =>
+        (a.opportunities || []).filter(
+          o => o.stage !== "Closed Won" && o.stage !== "Closed Lost"
+        )
+      );
+
+      responseText = opps.length
+        ? opps.map(
+            o => `${o.name}: ${o.stage || "N/A"} - ${money(o.amount)} (close: ${o.close_date || "N/A"})`
+          ).join("\n")
+        : "No open opportunities found.";
+    } else if (lower.includes("compare")) {
+      const found = db.accounts.filter(a =>
+        lower.includes(a.name.toLowerCase().split(" ")[0])
+      );
+
+      if (found.length >= 2) {
+        responseText = found
+          .slice(0, 2)
+          .map(
+            a => `${a.name}: Health ${a.health ?? "N/A"} | ${money(a.annualValue)} | ${a.tier || "N/A"}`
+          )
+          .join("\nvs\n");
+      } else {
+        responseText = `Name two accounts to compare. Available: ${db.accounts.map(a => a.name).join(", ")}`;
+      }
+    } else if (lower.includes("meeting") || lower.includes("prep")) {
+      const account = db.accounts.find(a =>
+        lower.includes(a.name.toLowerCase().split(" ")[0])
+      );
+
+      if (account) {
+        const risks = (account.risks || []).map(r => r).join("; ");
+        const opps = (account.opportunities || [])
+          .map(o => `${o.name}: ${o.stage || "N/A"} - ${money(o.amount)}`)
+          .join("\n");
+
+        responseText =
+          `Meeting Brief: ${account.name}\n` +
+          `Owner: ${account.owner || "N/A"} | Health: ${account.health ?? "N/A"}/100\n` +
+          `Pipeline:\n${opps || "No open opportunities"}\n` +
+          `Risks: ${risks || "None"}\n` +
+          `Talking Points:\n1. Review account health\n2. Discuss ${(account.microsoftProducts || [])[0] || "product"} adoption\n3. Address risks\n4. Plan next engagement`;
+      } else {
+        responseText = `Specify an account. Available: ${db.accounts.map(a => a.name).join(", ")}`;
+      }
+    } else {
+      responseText = "I can help with: account briefings, pipeline reviews, meeting prep, and comparisons.";
+    }
+
+    res.json({
+      id: id || "test-id",
+      status: { state: "completed" },
+      artifacts: [{ parts: [{ type: "text", text: responseText }] }]
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).json({
+    error: "internal_error",
+    message: err.message
+  });
+});
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`A2A Contoso Agent running on http://localhost:${PORT}`);
+  console.log(`Agent Card: http://localhost:${PORT}/.well-known/agent.json`);
+});
