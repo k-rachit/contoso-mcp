@@ -53,7 +53,7 @@ Settings > Connectors > Add Local Connector:
 |-------|-------|
 | Name | contoso-mcp |
 | Command | node |
-| Args | /Users/rachitkumar/AOM-Secure-Docs/contoso-mcp/server.js |
+| Args | /Users/rachitkumar/Documents/AOM-Secure-Docs/contoso-mcp/server.js |
 
 ## Demo Prompts
 
