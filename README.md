@@ -49,8 +49,21 @@ node server.js
 
 Settings > Connectors > Add Local Connector:
 
+| Field | Value |
+|-------|-------|
+| Name | contoso-mcp |
+| Command | node |
+| Args | /Users/rachitkumar/AOM-Secure-Docs/contoso-mcp/server.js |
+
 ## Demo Prompts
 
+1. "Brief me on Northwind Retail Group before my 2pm call"
+2. "Compare Fabrikam Manufacturing vs Woodgrove Bank"
+3. "Show all APAC accounts with health below 70"
+4. "What are the open opportunities for Contoso Health Services?"
+5. "Prepare a meeting brief for Fourth Coffee"
+6. "Add a note to Litware Inc: Discussed cloud migration timeline"
+7. "Move the Fabrikam Manufacturing opportunity to Negotiation stage"
 
 ## Tech Stack
 
