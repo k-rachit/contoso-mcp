@@ -65,7 +65,7 @@ Settings > Connectors > Add Local Connector:
 6. "Add a note to Litware Inc: Discussed cloud migration timeline"
 7. "Move the Fabrikam Manufacturing opportunity to Negotiation stage"
 
-## Tech Stack
+\n## A2A Agent Layer (Agent-to-Agent)\n\nThis project also exposes CRM data as a Google A2A-compatible agent for multi-agent orchestration.\n\n| Protocol | Purpose | Client |\n|----------|---------|--------|\n| **MCP** | Human-to-agent | Perplexity Mac app |\n| **A2A** | Agent-to-agent | Any A2A client, LangGraph, ADK |\n\nSee [a2a-demo/README.md](a2a-demo/README.md) for details.\n\n## Tech Stack
 
 - Node.js + ES Modules
 - @modelcontextprotocol/sdk

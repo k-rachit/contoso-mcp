@@ -1,0 +1,53 @@
+{
+  "name": "contoso-account-agent",
+  "description": "Enterprise account management agent for Contoso CRM",
+  "url": "http://localhost:3001",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "account-briefing",
+      "name": "Account Briefing",
+      "description": "Full account snapshot",
+      "tags": [
+        "crm",
+        "accounts"
+      ]
+    },
+    {
+      "id": "pipeline-review",
+      "name": "Pipeline Review",
+      "description": "Open opportunities with stage and amount",
+      "tags": [
+        "crm",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "meeting-prep",
+      "name": "Meeting Preparation",
+      "description": "Full meeting brief with risks and talking points",
+      "tags": [
+        "crm",
+        "meetings"
+      ]
+    },
+    {
+      "id": "account-comparison",
+      "name": "Account Comparison",
+      "description": "Side-by-side comparison of two accounts",
+      "tags": [
+        "crm",
+        "analysis"
+      ]
+    }
+  ],
+  "authentication": {
+    "schemes": [
+      "none"
+    ]
+  }
+}
