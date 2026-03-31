@@ -1,1 +1,555 @@
-{"accounts": [{"id": "acc-1001", "name": "Northwind Retail Group", "owner": "Alicia Tan", "executiveSponsor": "David Lim", "industry": "Retail", "region": "APAC", "tier": "Strategic", "health": "Amber", "annualValue": 320000, "renewalDate": "2026-09-30", "lastMeeting": "2026-03-15", "nextMeeting": "2026-04-10", "microsoftProducts": ["Azure", "Dynamics 365", "Power BI"], "summary": "Strategic retail customer evaluating cloud modernization and POS analytics rollout.", "risks": ["POS analytics pilot delayed due to data quality issues", "Budget approval pending for Phase 2"], "notes": [{"date": "2026-03-15", "author": "Alicia Tan", "text": "Met with CTO to discuss cloud modernization timeline. Phase 1 on track for April go-live."}, {"date": "2026-03-01", "author": "David Lim", "text": "Exec sync completed. Customer satisfied with POC results but wants cost optimization review."}, {"date": "2026-02-20", "author": "Alicia Tan", "text": "POS analytics demo well received by store ops team. Requesting pilot expansion to 5 more stores."}], "opportunities": [{"id": "opp-2001", "title": "Cloud Modernization Phase 1", "stage": "Proposal", "amount": 180000, "closeDate": "2026-04-18", "products": ["Azure App Service", "Azure SQL"]}, {"id": "opp-2002", "title": "Retail Analytics Dashboard", "stage": "Discovery", "amount": 65000, "closeDate": "2026-05-10", "products": ["Power BI Premium", "Azure Synapse"]}]}, {"id": "acc-1002", "name": "Contoso Health Services", "owner": "Marcus Chen", "executiveSponsor": "Sarah Wong", "industry": "Healthcare", "region": "APAC", "tier": "Enterprise", "health": "Red", "annualValue": 275000, "renewalDate": "2026-06-20", "lastMeeting": "2026-03-10", "nextMeeting": "2026-04-02", "microsoftProducts": ["Azure", "Microsoft 365", "Dynamics 365"], "summary": "Enterprise healthcare customer with active support escalations and renewal risk.", "risks": ["Open security review blocking expansion", "Executive sponsor changed", "Renewal confidence low"], "notes": [{"date": "2026-03-10", "author": "Marcus Chen", "text": "Escalation meeting with new CISO. Security review expected to complete by end of March."}, {"date": "2026-02-28", "author": "Sarah Wong", "text": "Previous exec sponsor Dr. Patel moved to advisory role. New sponsor Dr. Rao onboarding."}, {"date": "2026-02-15", "author": "Marcus Chen", "text": "Support ticket volume increased 40 percent this quarter. Customer requesting dedicated support engineer."}], "opportunities": [{"id": "opp-2004", "title": "Secure Data Platform Expansion", "stage": "Qualification", "amount": 90000, "closeDate": "2026-05-22", "products": ["Azure Confidential Computing", "Azure Key Vault"]}]}, {"id": "acc-1003", "name": "Fabrikam Manufacturing", "owner": "Priya Sharma", "executiveSponsor": "James Tan", "industry": "Manufacturing", "region": "APAC", "tier": "Enterprise", "health": "Green", "annualValue": 410000, "renewalDate": "2026-11-15", "lastMeeting": "2026-03-20", "nextMeeting": "2026-04-15", "microsoftProducts": ["Azure IoT Hub", "Dynamics 365 Supply Chain", "Power Automate"], "summary": "Leading APAC manufacturer with strong adoption of IoT and supply chain solutions.", "risks": ["Integration complexity with legacy ERP system"], "notes": [{"date": "2026-03-20", "author": "Priya Sharma", "text": "IoT sensor deployment completed across 3 plants. Real-time monitoring dashboard live."}, {"date": "2026-03-05", "author": "James Tan", "text": "Supply chain optimization saving estimated 12 percent logistics costs. Customer presenting at Ignite APAC."}, {"date": "2026-02-18", "author": "Priya Sharma", "text": "Legacy ERP migration scoping started. Target is full cutover by Q1 2027."}], "opportunities": [{"id": "opp-2005", "title": "Smart Factory Phase 2", "stage": "Negotiation", "amount": 220000, "closeDate": "2026-04-30", "products": ["Azure IoT Hub", "Azure Digital Twins"]}, {"id": "opp-2006", "title": "ERP Migration to D365", "stage": "Discovery", "amount": 150000, "closeDate": "2026-07-15", "products": ["Dynamics 365 Finance", "Dynamics 365 Supply Chain"]}]}, {"id": "acc-1004", "name": "Woodgrove Bank", "owner": "Rachel Ng", "executiveSponsor": "Kenneth Teo", "industry": "Financial Services", "region": "APAC", "tier": "Strategic", "health": "Green", "annualValue": 520000, "renewalDate": "2027-01-31", "lastMeeting": "2026-03-22", "nextMeeting": "2026-04-08", "microsoftProducts": ["Azure", "Microsoft 365", "GitHub Enterprise", "Copilot"], "summary": "Tier 1 APAC bank undergoing digital transformation with strong Microsoft platform commitment.", "risks": ["Regulatory compliance review for cloud workloads in progress", "Competitor vendor pitching alternative AI platform"], "notes": [{"date": "2026-03-22", "author": "Rachel Ng", "text": "Board approved cloud-first strategy. Migrating core banking APIs to Azure by Q3."}, {"date": "2026-03-12", "author": "Kenneth Teo", "text": "Copilot pilot across 500 employees showing 18 percent productivity improvement in operations."}, {"date": "2026-02-25", "author": "Rachel Ng", "text": "MAS regulatory review for cloud hosting expected to conclude April. Low risk of blockers."}], "opportunities": [{"id": "opp-2007", "title": "Core Banking API Migration", "stage": "Proposal", "amount": 350000, "closeDate": "2026-06-30", "products": ["Azure Kubernetes Service", "Azure API Management"]}, {"id": "opp-2008", "title": "Copilot Enterprise Rollout", "stage": "Negotiation", "amount": 180000, "closeDate": "2026-04-25", "products": ["Microsoft 365 Copilot"]}]}, {"id": "acc-1005", "name": "Adventure Works Logistics", "owner": "Alicia Tan", "executiveSponsor": "Michael Chong", "industry": "Logistics", "region": "APAC", "tier": "Growth", "health": "Amber", "annualValue": 185000, "renewalDate": "2026-08-20", "lastMeeting": "2026-03-18", "nextMeeting": "2026-04-12", "microsoftProducts": ["Azure Maps", "Power Apps", "Dynamics 365 Field Service"], "summary": "Fast-growing logistics company expanding fleet management and route optimization on Azure.", "risks": ["Limited internal IT capacity for implementation", "Budget constraints on Phase 2 expansion"], "notes": [{"date": "2026-03-18", "author": "Alicia Tan", "text": "Fleet tracking POC launched covering 200 vehicles. Real-time visibility improving dispatch efficiency."}, {"date": "2026-03-02", "author": "Michael Chong", "text": "Requesting partner engagement for implementation support due to lean IT team."}], "opportunities": [{"id": "opp-2009", "title": "Fleet Management Platform", "stage": "Proposal", "amount": 120000, "closeDate": "2026-05-15", "products": ["Azure Maps", "Azure IoT Hub", "Power Apps"]}]}, {"id": "acc-1006", "name": "Tailspin Toys", "owner": "Marcus Chen", "executiveSponsor": "Linda Koh", "industry": "Retail", "region": "EMEA", "tier": "Growth", "health": "Green", "annualValue": 145000, "renewalDate": "2026-12-10", "lastMeeting": "2026-03-08", "nextMeeting": "2026-04-20", "microsoftProducts": ["Dynamics 365 Commerce", "Power BI"], "summary": "European toy retailer expanding e-commerce platform on Dynamics 365.", "risks": [], "notes": [{"date": "2026-03-08", "author": "Marcus Chen", "text": "E-commerce platform migration on track. Holiday season 2026 target confirmed."}], "opportunities": [{"id": "opp-2010", "title": "E-Commerce Platform Upgrade", "stage": "Closed Won", "amount": 95000, "closeDate": "2026-03-01", "products": ["Dynamics 365 Commerce"]}]}, {"id": "acc-1007", "name": "Litware Inc", "owner": "James Rodriguez", "executiveSponsor": "Maria Santos", "industry": "Technology", "region": "AMER", "tier": "Strategic", "health": "Green", "annualValue": 480000, "renewalDate": "2026-10-15", "lastMeeting": "2026-03-25", "nextMeeting": "2026-04-05", "microsoftProducts": ["Azure", "GitHub Enterprise", "Microsoft 365", "Copilot"], "summary": "US-based SaaS company with deep Azure adoption and expanding Copilot rollout.", "risks": ["Key architect leaving in Q2"], "notes": [{"date": "2026-03-25", "author": "James Rodriguez", "text": "Copilot adoption at 80 percent across engineering. Planning expansion to sales team."}, {"date": "2026-03-10", "author": "Maria Santos", "text": "CTO confirmed multi-year Azure commitment at executive dinner."}], "opportunities": [{"id": "opp-3001", "title": "Copilot Sales Team Rollout", "stage": "Proposal", "amount": 200000, "closeDate": "2026-05-20", "products": ["Microsoft 365 Copilot"]}, {"id": "opp-3002", "title": "Azure Reserved Instances Renewal", "stage": "Negotiation", "amount": 350000, "closeDate": "2026-04-30", "products": ["Azure"]}]}, {"id": "acc-1008", "name": "Fourth Coffee", "owner": "Sarah Miller", "executiveSponsor": "Tom Baker", "industry": "Food and Beverage", "region": "AMER", "tier": "Growth", "health": "Amber", "annualValue": 120000, "renewalDate": "2026-07-31", "lastMeeting": "2026-03-12", "nextMeeting": "2026-04-18", "microsoftProducts": ["Dynamics 365 Commerce", "Power BI", "Azure"], "summary": "Regional coffee chain modernizing POS and supply chain with Dynamics 365.", "risks": ["Budget freeze due to Q1 earnings miss", "IT director role vacant"], "notes": [{"date": "2026-03-12", "author": "Sarah Miller", "text": "POS rollout paused pending new IT director hire. Budget review in April."}, {"date": "2026-02-20", "author": "Tom Baker", "text": "Supply chain module POC showed 15 percent waste reduction. Strong business case."}], "opportunities": [{"id": "opp-3003", "title": "POS Modernization Phase 2", "stage": "Discovery", "amount": 85000, "closeDate": "2026-06-15", "products": ["Dynamics 365 Commerce"]}]}, {"id": "acc-1009", "name": "Alpine Ski House", "owner": "Hans Mueller", "executiveSponsor": "Eva Schmidt", "industry": "Hospitality", "region": "EMEA", "tier": "Enterprise", "health": "Green", "annualValue": 290000, "renewalDate": "2026-12-31", "lastMeeting": "2026-03-18", "nextMeeting": "2026-04-22", "microsoftProducts": ["Azure", "Dynamics 365 Customer Service", "Power Platform"], "summary": "European hospitality chain using Dynamics 365 for guest services and Power Platform for operations.", "risks": ["GDPR audit scheduled for Q3"], "notes": [{"date": "2026-03-18", "author": "Hans Mueller", "text": "Guest satisfaction scores up 22 percent since Dynamics 365 Customer Service launch."}, {"date": "2026-03-01", "author": "Eva Schmidt", "text": "Board approved Power Platform citizen developer program for 200 staff."}], "opportunities": [{"id": "opp-3004", "title": "Power Platform Citizen Dev Rollout", "stage": "Proposal", "amount": 150000, "closeDate": "2026-06-30", "products": ["Power Platform"]}, {"id": "opp-3005", "title": "Azure AI Concierge Bot", "stage": "Discovery", "amount": 95000, "closeDate": "2026-08-15", "products": ["Azure AI Services", "Azure Bot Service"]}]}, {"id": "acc-1010", "name": "Proseware Ltd", "owner": "Marcus Chen", "executiveSponsor": "Claire Dubois", "industry": "Professional Services", "region": "EMEA", "tier": "Growth", "health": "Red", "annualValue": 165000, "renewalDate": "2026-05-31", "lastMeeting": "2026-03-20", "nextMeeting": "2026-03-31", "microsoftProducts": ["Microsoft 365", "Azure"], "summary": "European consultancy with imminent renewal risk and active competitor displacement threat.", "risks": ["Renewal in 60 days with no commitment", "Competitor (Google Workspace) actively pitching", "Multiple unresolved support tickets"], "notes": [{"date": "2026-03-20", "author": "Marcus Chen", "text": "Urgent call with CFO. They are evaluating Google Workspace as 30 percent cheaper alternative."}, {"date": "2026-03-15", "author": "Claire Dubois", "text": "Three P1 support tickets open for over 2 weeks. Customer frustrated."}], "opportunities": [{"id": "opp-3006", "title": "M365 Renewal and Copilot Upsell", "stage": "Qualification", "amount": 165000, "closeDate": "2026-05-31", "products": ["Microsoft 365", "Microsoft 365 Copilot"]}]}, {"id": "acc-1007", "name": "Litware Inc", "owner": "James Rodriguez", "executiveSponsor": "Maria Santos", "industry": "Technology", "region": "AMER", "tier": "Strategic", "health": "Green", "annualValue": 480000, "renewalDate": "2026-10-15", "lastMeeting": "2026-03-25", "nextMeeting": "2026-04-05", "microsoftProducts": ["Azure", "GitHub Enterprise", "Microsoft 365", "Copilot"], "summary": "US-based SaaS company with deep Azure adoption and expanding Copilot rollout.", "risks": ["Key architect leaving in Q2"], "notes": [{"date": "2026-03-25", "author": "James Rodriguez", "text": "Copilot adoption at 80 percent across engineering. Planning expansion to sales team."}, {"date": "2026-03-10", "author": "Maria Santos", "text": "CTO confirmed multi-year Azure commitment at executive dinner."}], "opportunities": [{"id": "opp-3001", "title": "Copilot Sales Team Rollout", "stage": "Proposal", "amount": 200000, "closeDate": "2026-05-20", "products": ["Microsoft 365 Copilot"]}, {"id": "opp-3002", "title": "Azure Reserved Instances Renewal", "stage": "Negotiation", "amount": 350000, "closeDate": "2026-04-30", "products": ["Azure"]}]}, {"id": "acc-1008", "name": "Fourth Coffee", "owner": "Sarah Miller", "executiveSponsor": "Tom Baker", "industry": "Food and Beverage", "region": "AMER", "tier": "Growth", "health": "Amber", "annualValue": 120000, "renewalDate": "2026-07-31", "lastMeeting": "2026-03-12", "nextMeeting": "2026-04-18", "microsoftProducts": ["Dynamics 365 Commerce", "Power BI", "Azure"], "summary": "Regional coffee chain modernizing POS and supply chain with Dynamics 365.", "risks": ["Budget freeze due to Q1 earnings miss", "IT director role vacant"], "notes": [{"date": "2026-03-12", "author": "Sarah Miller", "text": "POS rollout paused pending new IT director hire. Budget review in April."}, {"date": "2026-02-20", "author": "Tom Baker", "text": "Supply chain module POC showed 15 percent waste reduction. Strong business case."}], "opportunities": [{"id": "opp-3003", "title": "POS Modernization Phase 2", "stage": "Discovery", "amount": 85000, "closeDate": "2026-06-15", "products": ["Dynamics 365 Commerce"]}]}, {"id": "acc-1009", "name": "Alpine Ski House", "owner": "Hans Mueller", "executiveSponsor": "Eva Schmidt", "industry": "Hospitality", "region": "EMEA", "tier": "Enterprise", "health": "Green", "annualValue": 290000, "renewalDate": "2026-12-31", "lastMeeting": "2026-03-18", "nextMeeting": "2026-04-22", "microsoftProducts": ["Azure", "Dynamics 365 Customer Service", "Power Platform"], "summary": "European hospitality chain using Dynamics 365 for guest services and Power Platform for operations.", "risks": ["GDPR audit scheduled for Q3"], "notes": [{"date": "2026-03-18", "author": "Hans Mueller", "text": "Guest satisfaction scores up 22 percent since Dynamics 365 Customer Service launch."}, {"date": "2026-03-01", "author": "Eva Schmidt", "text": "Board approved Power Platform citizen developer program for 200 staff."}], "opportunities": [{"id": "opp-3004", "title": "Power Platform Citizen Dev Rollout", "stage": "Proposal", "amount": 150000, "closeDate": "2026-06-30", "products": ["Power Platform"]}, {"id": "opp-3005", "title": "Azure AI Concierge Bot", "stage": "Discovery", "amount": 95000, "closeDate": "2026-08-15", "products": ["Azure AI Services", "Azure Bot Service"]}]}, {"id": "acc-1010", "name": "Proseware Ltd", "owner": "Marcus Chen", "executiveSponsor": "Claire Dubois", "industry": "Professional Services", "region": "EMEA", "tier": "Growth", "health": "Red", "annualValue": 165000, "renewalDate": "2026-05-31", "lastMeeting": "2026-03-20", "nextMeeting": "2026-03-31", "microsoftProducts": ["Microsoft 365", "Azure"], "summary": "European consultancy with imminent renewal risk and active competitor displacement threat.", "risks": ["Renewal in 60 days with no commitment", "Competitor (Google Workspace) actively pitching", "Multiple unresolved support tickets"], "notes": [{"date": "2026-03-20", "author": "Marcus Chen", "text": "Urgent call with CFO. They are evaluating Google Workspace as 30 percent cheaper alternative."}, {"date": "2026-03-15", "author": "Claire Dubois", "text": "Three P1 support tickets open for over 2 weeks. Customer frustrated."}], "opportunities": [{"id": "opp-3006", "title": "M365 Renewal and Copilot Upsell", "stage": "Qualification", "amount": 165000, "closeDate": "2026-05-31", "products": ["Microsoft 365", "Microsoft 365 Copilot"]}]}]}
+{
+  "accounts": [
+    {
+      "id": "acc-1001",
+      "name": "Northwind Retail Group",
+      "owner": "Alicia Tan",
+      "executiveSponsor": "David Lim",
+      "industry": "Retail",
+      "region": "APAC",
+      "tier": "Strategic",
+      "health": "Amber",
+      "annualValue": 320000,
+      "renewalDate": "2026-09-30",
+      "lastMeeting": "2026-03-15",
+      "nextMeeting": "2026-04-10",
+      "microsoftProducts": [
+        "Azure",
+        "Dynamics 365",
+        "Power BI"
+      ],
+      "summary": "Strategic retail customer evaluating cloud modernization and POS analytics rollout.",
+      "risks": [
+        "POS analytics pilot delayed due to data quality issues",
+        "Budget approval pending for Phase 2"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-15",
+          "author": "Alicia Tan",
+          "text": "Met with CTO to discuss cloud modernization timeline. Phase 1 on track for April go-live."
+        },
+        {
+          "date": "2026-03-01",
+          "author": "David Lim",
+          "text": "Exec sync completed. Customer satisfied with POC results but wants cost optimization review."
+        },
+        {
+          "date": "2026-02-20",
+          "author": "Alicia Tan",
+          "text": "POS analytics demo well received by store ops team. Requesting pilot expansion to 5 more stores."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-2001",
+          "title": "Cloud Modernization Phase 1",
+          "stage": "Proposal",
+          "amount": 180000,
+          "closeDate": "2026-04-18",
+          "products": [
+            "Azure App Service",
+            "Azure SQL"
+          ]
+        },
+        {
+          "id": "opp-2002",
+          "title": "Retail Analytics Dashboard",
+          "stage": "Discovery",
+          "amount": 65000,
+          "closeDate": "2026-05-10",
+          "products": [
+            "Power BI Premium",
+            "Azure Synapse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1002",
+      "name": "Contoso Health Services",
+      "owner": "Marcus Chen",
+      "executiveSponsor": "Sarah Wong",
+      "industry": "Healthcare",
+      "region": "APAC",
+      "tier": "Enterprise",
+      "health": "Red",
+      "annualValue": 275000,
+      "renewalDate": "2026-06-20",
+      "lastMeeting": "2026-03-10",
+      "nextMeeting": "2026-04-02",
+      "microsoftProducts": [
+        "Azure",
+        "Microsoft 365",
+        "Dynamics 365"
+      ],
+      "summary": "Enterprise healthcare customer with active support escalations and renewal risk.",
+      "risks": [
+        "Open security review blocking expansion",
+        "Executive sponsor changed",
+        "Renewal confidence low"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-10",
+          "author": "Marcus Chen",
+          "text": "Escalation meeting with new CISO. Security review expected to complete by end of March."
+        },
+        {
+          "date": "2026-02-28",
+          "author": "Sarah Wong",
+          "text": "Previous exec sponsor Dr. Patel moved to advisory role. New sponsor Dr. Rao onboarding."
+        },
+        {
+          "date": "2026-02-15",
+          "author": "Marcus Chen",
+          "text": "Support ticket volume increased 40 percent this quarter. Customer requesting dedicated support engineer."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-2004",
+          "title": "Secure Data Platform Expansion",
+          "stage": "Qualification",
+          "amount": 90000,
+          "closeDate": "2026-05-22",
+          "products": [
+            "Azure Confidential Computing",
+            "Azure Key Vault"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1003",
+      "name": "Fabrikam Manufacturing",
+      "owner": "Priya Sharma",
+      "executiveSponsor": "James Tan",
+      "industry": "Manufacturing",
+      "region": "APAC",
+      "tier": "Enterprise",
+      "health": "Green",
+      "annualValue": 410000,
+      "renewalDate": "2026-11-15",
+      "lastMeeting": "2026-03-20",
+      "nextMeeting": "2026-04-15",
+      "microsoftProducts": [
+        "Azure IoT Hub",
+        "Dynamics 365 Supply Chain",
+        "Power Automate"
+      ],
+      "summary": "Leading APAC manufacturer with strong adoption of IoT and supply chain solutions.",
+      "risks": [
+        "Integration complexity with legacy ERP system"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-20",
+          "author": "Priya Sharma",
+          "text": "IoT sensor deployment completed across 3 plants. Real-time monitoring dashboard live."
+        },
+        {
+          "date": "2026-03-05",
+          "author": "James Tan",
+          "text": "Supply chain optimization saving estimated 12 percent logistics costs. Customer presenting at Ignite APAC."
+        },
+        {
+          "date": "2026-02-18",
+          "author": "Priya Sharma",
+          "text": "Legacy ERP migration scoping started. Target is full cutover by Q1 2027."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-2005",
+          "title": "Smart Factory Phase 2",
+          "stage": "Negotiation",
+          "amount": 220000,
+          "closeDate": "2026-04-30",
+          "products": [
+            "Azure IoT Hub",
+            "Azure Digital Twins"
+          ]
+        },
+        {
+          "id": "opp-2006",
+          "title": "ERP Migration to D365",
+          "stage": "Discovery",
+          "amount": 150000,
+          "closeDate": "2026-07-15",
+          "products": [
+            "Dynamics 365 Finance",
+            "Dynamics 365 Supply Chain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1004",
+      "name": "Woodgrove Bank",
+      "owner": "Rachel Ng",
+      "executiveSponsor": "Kenneth Teo",
+      "industry": "Financial Services",
+      "region": "APAC",
+      "tier": "Strategic",
+      "health": "Green",
+      "annualValue": 520000,
+      "renewalDate": "2027-01-31",
+      "lastMeeting": "2026-03-22",
+      "nextMeeting": "2026-04-08",
+      "microsoftProducts": [
+        "Azure",
+        "Microsoft 365",
+        "GitHub Enterprise",
+        "Copilot"
+      ],
+      "summary": "Tier 1 APAC bank undergoing digital transformation with strong Microsoft platform commitment.",
+      "risks": [
+        "Regulatory compliance review for cloud workloads in progress",
+        "Competitor vendor pitching alternative AI platform"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-22",
+          "author": "Rachel Ng",
+          "text": "Board approved cloud-first strategy. Migrating core banking APIs to Azure by Q3."
+        },
+        {
+          "date": "2026-03-12",
+          "author": "Kenneth Teo",
+          "text": "Copilot pilot across 500 employees showing 18 percent productivity improvement in operations."
+        },
+        {
+          "date": "2026-02-25",
+          "author": "Rachel Ng",
+          "text": "MAS regulatory review for cloud hosting expected to conclude April. Low risk of blockers."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-2007",
+          "title": "Core Banking API Migration",
+          "stage": "Proposal",
+          "amount": 350000,
+          "closeDate": "2026-06-30",
+          "products": [
+            "Azure Kubernetes Service",
+            "Azure API Management"
+          ]
+        },
+        {
+          "id": "opp-2008",
+          "title": "Copilot Enterprise Rollout",
+          "stage": "Negotiation",
+          "amount": 180000,
+          "closeDate": "2026-04-25",
+          "products": [
+            "Microsoft 365 Copilot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1005",
+      "name": "Adventure Works Logistics",
+      "owner": "Alicia Tan",
+      "executiveSponsor": "Michael Chong",
+      "industry": "Logistics",
+      "region": "APAC",
+      "tier": "Growth",
+      "health": "Amber",
+      "annualValue": 185000,
+      "renewalDate": "2026-08-20",
+      "lastMeeting": "2026-03-18",
+      "nextMeeting": "2026-04-12",
+      "microsoftProducts": [
+        "Azure Maps",
+        "Power Apps",
+        "Dynamics 365 Field Service"
+      ],
+      "summary": "Fast-growing logistics company expanding fleet management and route optimization on Azure.",
+      "risks": [
+        "Limited internal IT capacity for implementation",
+        "Budget constraints on Phase 2 expansion"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-18",
+          "author": "Alicia Tan",
+          "text": "Fleet tracking POC launched covering 200 vehicles. Real-time visibility improving dispatch efficiency."
+        },
+        {
+          "date": "2026-03-02",
+          "author": "Michael Chong",
+          "text": "Requesting partner engagement for implementation support due to lean IT team."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-2009",
+          "title": "Fleet Management Platform",
+          "stage": "Proposal",
+          "amount": 120000,
+          "closeDate": "2026-05-15",
+          "products": [
+            "Azure Maps",
+            "Azure IoT Hub",
+            "Power Apps"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1006",
+      "name": "Tailspin Toys",
+      "owner": "Marcus Chen",
+      "executiveSponsor": "Linda Koh",
+      "industry": "Retail",
+      "region": "EMEA",
+      "tier": "Growth",
+      "health": "Green",
+      "annualValue": 145000,
+      "renewalDate": "2026-12-10",
+      "lastMeeting": "2026-03-08",
+      "nextMeeting": "2026-04-20",
+      "microsoftProducts": [
+        "Dynamics 365 Commerce",
+        "Power BI"
+      ],
+      "summary": "European toy retailer expanding e-commerce platform on Dynamics 365.",
+      "risks": [],
+      "notes": [
+        {
+          "date": "2026-03-08",
+          "author": "Marcus Chen",
+          "text": "E-commerce platform migration on track. Holiday season 2026 target confirmed."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-2010",
+          "title": "E-Commerce Platform Upgrade",
+          "stage": "Closed Won",
+          "amount": 95000,
+          "closeDate": "2026-03-01",
+          "products": [
+            "Dynamics 365 Commerce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1007",
+      "name": "Litware Inc",
+      "owner": "James Rodriguez",
+      "executiveSponsor": "Maria Santos",
+      "industry": "Technology",
+      "region": "AMER",
+      "tier": "Strategic",
+      "health": "Green",
+      "annualValue": 480000,
+      "renewalDate": "2026-10-15",
+      "lastMeeting": "2026-03-25",
+      "nextMeeting": "2026-04-05",
+      "microsoftProducts": [
+        "Azure",
+        "GitHub Enterprise",
+        "Microsoft 365",
+        "Copilot"
+      ],
+      "summary": "US-based SaaS company with deep Azure adoption and expanding Copilot rollout.",
+      "risks": [
+        "Key architect leaving in Q2"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-25",
+          "author": "James Rodriguez",
+          "text": "Copilot adoption at 80 percent across engineering. Planning expansion to sales team."
+        },
+        {
+          "date": "2026-03-10",
+          "author": "Maria Santos",
+          "text": "CTO confirmed multi-year Azure commitment at executive dinner."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-3001",
+          "title": "Copilot Sales Team Rollout",
+          "stage": "Proposal",
+          "amount": 200000,
+          "closeDate": "2026-05-20",
+          "products": [
+            "Microsoft 365 Copilot"
+          ]
+        },
+        {
+          "id": "opp-3002",
+          "title": "Azure Reserved Instances Renewal",
+          "stage": "Negotiation",
+          "amount": 350000,
+          "closeDate": "2026-04-30",
+          "products": [
+            "Azure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1008",
+      "name": "Fourth Coffee",
+      "owner": "Sarah Miller",
+      "executiveSponsor": "Tom Baker",
+      "industry": "Food and Beverage",
+      "region": "AMER",
+      "tier": "Growth",
+      "health": "Amber",
+      "annualValue": 120000,
+      "renewalDate": "2026-07-31",
+      "lastMeeting": "2026-03-12",
+      "nextMeeting": "2026-04-18",
+      "microsoftProducts": [
+        "Dynamics 365 Commerce",
+        "Power BI",
+        "Azure"
+      ],
+      "summary": "Regional coffee chain modernizing POS and supply chain with Dynamics 365.",
+      "risks": [
+        "Budget freeze due to Q1 earnings miss",
+        "IT director role vacant"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-12",
+          "author": "Sarah Miller",
+          "text": "POS rollout paused pending new IT director hire. Budget review in April."
+        },
+        {
+          "date": "2026-02-20",
+          "author": "Tom Baker",
+          "text": "Supply chain module POC showed 15 percent waste reduction. Strong business case."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-3003",
+          "title": "POS Modernization Phase 2",
+          "stage": "Discovery",
+          "amount": 85000,
+          "closeDate": "2026-06-15",
+          "products": [
+            "Dynamics 365 Commerce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1009",
+      "name": "Alpine Ski House",
+      "owner": "Hans Mueller",
+      "executiveSponsor": "Eva Schmidt",
+      "industry": "Hospitality",
+      "region": "EMEA",
+      "tier": "Enterprise",
+      "health": "Green",
+      "annualValue": 290000,
+      "renewalDate": "2026-12-31",
+      "lastMeeting": "2026-03-18",
+      "nextMeeting": "2026-04-22",
+      "microsoftProducts": [
+        "Azure",
+        "Dynamics 365 Customer Service",
+        "Power Platform"
+      ],
+      "summary": "European hospitality chain using Dynamics 365 for guest services and Power Platform for operations.",
+      "risks": [
+        "GDPR audit scheduled for Q3"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-18",
+          "author": "Hans Mueller",
+          "text": "Guest satisfaction scores up 22 percent since Dynamics 365 Customer Service launch."
+        },
+        {
+          "date": "2026-03-01",
+          "author": "Eva Schmidt",
+          "text": "Board approved Power Platform citizen developer program for 200 staff."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-3004",
+          "title": "Power Platform Citizen Dev Rollout",
+          "stage": "Proposal",
+          "amount": 150000,
+          "closeDate": "2026-06-30",
+          "products": [
+            "Power Platform"
+          ]
+        },
+        {
+          "id": "opp-3005",
+          "title": "Azure AI Concierge Bot",
+          "stage": "Discovery",
+          "amount": 95000,
+          "closeDate": "2026-08-15",
+          "products": [
+            "Azure AI Services",
+            "Azure Bot Service"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acc-1010",
+      "name": "Proseware Ltd",
+      "owner": "Marcus Chen",
+      "executiveSponsor": "Claire Dubois",
+      "industry": "Professional Services",
+      "region": "EMEA",
+      "tier": "Growth",
+      "health": "Red",
+      "annualValue": 165000,
+      "renewalDate": "2026-05-31",
+      "lastMeeting": "2026-03-20",
+      "nextMeeting": "2026-03-31",
+      "microsoftProducts": [
+        "Microsoft 365",
+        "Azure"
+      ],
+      "summary": "European consultancy with imminent renewal risk and active competitor displacement threat.",
+      "risks": [
+        "Renewal in 60 days with no commitment",
+        "Competitor (Google Workspace) actively pitching",
+        "Multiple unresolved support tickets"
+      ],
+      "notes": [
+        {
+          "date": "2026-03-20",
+          "author": "Marcus Chen",
+          "text": "Urgent call with CFO. They are evaluating Google Workspace as 30 percent cheaper alternative."
+        },
+        {
+          "date": "2026-03-15",
+          "author": "Claire Dubois",
+          "text": "Three P1 support tickets open for over 2 weeks. Customer frustrated."
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "opp-3006",
+          "title": "M365 Renewal and Copilot Upsell",
+          "stage": "Qualification",
+          "amount": 165000,
+          "closeDate": "2026-05-31",
+          "products": [
+            "Microsoft 365",
+            "Microsoft 365 Copilot"
+          ]
+        }
+      ]
+    }
+  ]
+}
